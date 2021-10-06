@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startDownload(View view) {
+        stopThread = false;
         ExampleRunnable runnable = new ExampleRunnable();
         new Thread(runnable).start();
     }
